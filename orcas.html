@@ -1,0 +1,287 @@
+<html>
+	<head>
+		<title>ORCAS</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Lato:wght@400&display=swap" rel="stylesheet">
+
+	<style type="text/css">
+
+	body{background-color:#E8F0FF;
+	margin:0;
+	padding:40px}
+
+	.e0{color:#274C8E;
+	font-family:'Playfair Display', serif;
+	font-size:48pt;
+	text-align:center}
+
+	.e1{color:#274C8E;
+	font-family:'Lato', sans-serif;
+	font-size:20px;
+	text-align:justify}
+
+	.e2{color:#406BB3;
+	font-family:'Playfair Display', serif;
+	font-size:36px;
+	text-align: center}
+
+	img{display:block;
+	margin:auto;
+	width:60%;
+	border-radius:10px}
+
+	.linea{width:85%;
+	height:4px;
+	background-color:#406BB3;
+	margin:20px auto}
+
+	.galeria{display:flex;
+	flex-wrap:wrap;
+	justify-content:center;
+	gap:20px;
+	margin-top:30px}
+
+	.foto{width:250px;
+	text-align:center}
+
+	.foto img{width:100%;
+	height:180px;
+	object-fit:cover;
+	border-radius:10px;
+	transition:0.3s}
+
+	.foto img:hover{transform:scale(1.08)}
+
+.slides {
+    padding: 0;
+    width: 350px;
+    height: 350px;
+    display: block;
+    margin: 0 auto;
+    position: relative;
+}
+
+.slides * {
+    user-select: none;
+    -ms-user-select: none;
+    -moz-user-select: none;
+    -khtml-user-select: none;
+    -webkit-user-select: none;
+    -webkit-touch-callout: none;
+}
+
+.slides input { display: none; }
+
+.slide-container { display: block; }
+
+.slide {
+    top: 0;
+    opacity: 0;
+    width: 350px;
+    height: 350px;
+    display: block;
+    position: absolute;
+
+    transform: scale(0);
+
+    transition: all .7s ease-in-out;
+}
+
+.slide img {
+    width: 100%;
+    height: 100%;
+}
+
+.nav label {
+    width: 200px;
+    height: 100%;
+    display: none;
+    position: absolute;
+
+	  opacity: 0;
+    z-index: 9;
+    cursor: pointer;
+
+    transition: opacity .2s;
+
+    color: #FFF;
+    font-size: 156pt;
+    text-align: center;
+    line-height: 380px;
+    font-family: "Varela Round", sans-serif;
+    background-color: rgba(255, 255, 255, .3);
+    text-shadow: 0px 0px 15px rgb(119, 119, 119);
+}
+
+.slide:hover + .nav label { opacity: 0.5; }
+
+.nav label:hover { opacity: 1; }
+
+.nav .next { right: 0; }
+
+input:checked + .slide-container  .slide {
+    opacity: 1;
+
+    transform: scale(1);
+
+    transition: opacity 1s ease-in-out;
+}
+
+input:checked + .slide-container .nav label { display: block; }
+
+.nav-dots {
+	width: 100%;
+	bottom: 9px;
+	height: 11px;
+	display: block;
+	position: absolute;
+	text-align: center;
+}
+
+.nav-dots .nav-dot {
+	top: -5px;
+	width: 11px;
+	height: 11px;
+	margin: 0 4px;
+	position: relative;
+	border-radius: 100%;
+	display: inline-block;
+	background-color: rgba(0, 0, 0, 0.6);
+}
+
+.nav-dots .nav-dot:hover {
+	cursor: pointer;
+	background-color: rgba(0, 0, 0, 0.8);
+}
+
+input#img-1:checked ~ .nav-dots label#img-dot-1,
+input#img-2:checked ~ .nav-dots label#img-dot-2,
+input#img-3:checked ~ .nav-dots label#img-dot-3,
+input#img-4:checked ~ .nav-dots label#img-dot-4,
+input#img-5:checked ~ .nav-dots label#img-dot-5,
+input#img-6:checked ~ .nav-dots label#img-dot-6 {
+	background: rgba(0, 0, 0, 0.8);
+}
+</style>
+</head>
+
+<body>
+
+	<p class="e0">ORCAS</p>
+	<p class="e2"> (Orcinus orca) </p>
+	<img src="o1.jpg">
+		<div class="linea"></div>
+
+	<p class="e2">Hábitat</p>
+
+	<p class="e1">
+Las orcas (Orcinus orca) son mamíferos marinos que pertenecen a la familia de los delfines.
+Habitan en todos los océanos del planeta, desde las aguas frías del Ártico y la Antártida
+hasta zonas más templadas y tropicales. Generalmente se encuentran en áreas donde hay
+gran cantidad de alimento, como peces, focas y otros mamíferos marinos.
+	</p>
+
+	<p class="e2">Estilo de vida</p>
+
+	<p class="e1">
+Las orcas viven en grupos familiares llamados manadas o pods. Estos grupos suelen estar
+liderados por una hembra adulta y permanecen juntos durante toda su vida. Son animales
+muy sociales e inteligentes que se comunican mediante sonidos y trabajan en equipo
+para cazar a sus presas.
+	</p>
+
+	<p class="e2">5 Características de las orcas</p>
+
+	<ol class="e1">
+		<li>Pueden medir hasta 9 metros de longitud.</li>
+		<li>Su color blanco y negro las hace fácilmente reconocibles.</li>
+		<li>Son uno de los depredadores más poderosos del océano.</li>
+		<li>Poseen gran inteligencia y capacidad de comunicación.</li>
+		<li>Viven en grupos familiares muy organizados.</li>
+	</ol>
+
+<ul class="slides">
+    <input type="radio" name="radio-btn" id="img-1" checked />
+    <li class="slide-container">
+		<div class="slide">
+			<img src="o2.jpg" />
+        </div>
+		<div class="nav">
+			<label for="img-6" class="prev">&#x2039;</label>
+			<label for="img-2" class="next">&#x203a;</label>
+		</div>
+    </li>
+
+    <input type="radio" name="radio-btn" id="img-2" />
+    <li class="slide-container">
+        <div class="slide">
+          <img src="o3.jpg" />
+        </div>
+		<div class="nav">
+			<label for="img-1" class="prev">&#x2039;</label>
+			<label for="img-3" class="next">&#x203a;</label>
+		</div>
+    </li>
+
+    <input type="radio" name="radio-btn" id="img-3" />
+    <li class="slide-container">
+        <div class="slide">
+          <img src="o4.jpg" />
+        </div>
+		<div class="nav">
+			<label for="img-2" class="prev">&#x2039;</label>
+			<label for="img-4" class="next">&#x203a;</label>
+		</div>
+    </li>
+
+    <input type="radio" name="radio-btn" id="img-4" />
+    <li class="slide-container">
+        <div class="slide">
+          <img src="o5.jpg" />
+        </div>
+		<div class="nav">
+			<label for="img-3" class="prev">&#x2039;</label>
+			<label for="img-5" class="next">&#x203a;</label>
+		</div>
+    </li>
+
+    <input type="radio" name="radio-btn" id="img-5" />
+    <li class="slide-container">
+        <div class="slide">
+          <img src="o6.jpg" />
+        </div>
+		<div class="nav">
+			<label for="img-4" class="prev">&#x2039;</label>
+			<label for="img-6" class="next">&#x203a;</label>
+		</div>
+    </li>
+
+    <input type="radio" name="radio-btn" id="img-6" />
+    <li class="slide-container">
+        <div class="slide">
+          <img src="o7.jpg" />
+        </div>
+		<div class="nav">
+			<label for="img-5" class="prev">&#x2039;</label>
+			<label for="img-1" class="next">&#x203a;</label>
+		</div>
+    </li>
+
+    <li class="nav-dots">
+      <label for="img-1" class="nav-dot" id="img-dot-1"></label>
+      <label for="img-2" class="nav-dot" id="img-dot-2"></label>
+      <label for="img-3" class="nav-dot" id="img-dot-3"></label>
+      <label for="img-4" class="nav-dot" id="img-dot-4"></label>
+      <label for="img-5" class="nav-dot" id="img-dot-5"></label>
+      <label for="img-6" class="nav-dot" id="img-dot-6"></label>
+    </li>
+</ul>
+</div>
+
+	<center>
+		<a href="index.html">Regresar a la página principal</a>
+	</center>
+
+
+</body>
+</html>
